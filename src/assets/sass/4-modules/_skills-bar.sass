@@ -1,0 +1,82 @@
+$bar-background-color: #eee
+$bar-color: #44A1A7
+
+
+
+@keyframes bars  
+    from
+        width: 0px
+    to 
+        max-width: 100%
+
+@mixin bar-description($perc)
+    background-color: $bar-color
+    transition: 1.1s 0.2s width
+    animation-timing-function: ease-in-out
+    animation: bars 1 1.8s
+    width: $perc
+    
+.skills-container
+    max-width: 800px
+    margin: 0 auto
+    padding: 0 40px
+
+.bar 
+    height: 25px
+    line-height: 25px
+    background-color: $bar-background-color
+    color: white
+    + .bar 
+        margin-top: 10px
+   
+.tag 
+    position: relative
+    left: -170px
+    display: flex
+    background-color: #04C2C9
+    color: #fff
+    height: 100%
+    width: 170px
+    font-size: 15px
+    font-weight: 700
+    justify-content: center
+    
+.bar1
+    @include bar-description(90%)
+    
+
+.bar2 
+    @include bar-description(80%)
+
+.bar3
+    @include bar-description(70%)
+
+.bar4
+    @include bar-description(20%)
+
+.bar5
+    @include bar-description(90%)
+
+.bar6
+    @include bar-description(80%)
+
+.bar7
+    @include bar-description(90%)
+
+.bar8
+    @include bar-description(90%)
+
+.bar9
+    @include bar-description(75%)
+
+.bar10
+    @include bar-description(70%)
+
+.bar11
+    @include bar-description(80%)
+
+.bar12
+    @include bar-description(50%)
+
+.bar13
+    @include bar-description(50%)        
