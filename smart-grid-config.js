@@ -2,6 +2,7 @@ var smartgrid = require('smart-grid');
 
 /* It's principal settings in smart grid project */
 var settings = {
+	filename: '_smart-grid',
     outputStyle: 'sass',
     /* less || scss || sass || styl */
     columns: 12,
@@ -42,4 +43,4 @@ var settings = {
     }
 };
 
-smartgrid('./src/assets/sass/5-grid', settings);
+smartgrid('./src/assets/sass/5-grid/', settings);

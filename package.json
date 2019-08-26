@@ -14,7 +14,7 @@
   "author": "https://github.com/AlexBerezkin",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/AlexBerezkin/My_portfolio"
   },
   "keywords": [
     "portfolio",
