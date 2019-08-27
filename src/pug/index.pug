@@ -3,69 +3,73 @@ html
     head
     body
         header#header
+            include ./modules/header-bg.pug
+            
             div.hero-text-box
-                h1 Hello, I'm Alex Berezkin <br/> I'm a web developer
-            nav
-                ul.main-nav
-                    li
-                        a(href="#header") home
-                    li
-                        a(href="#about") about
-                    li
-                        a(href="#portfolio") portfolio
-                    li
-                        a(href="#contact") contact
+                h1 Hello, I'm Alex Berezkin<br/>I'm a web developer
+        nav
+            ul.main-nav
+                li
+                    a(href="#header") home
+                li
+                    a(href="#about") about
+                li
+                    a(href="#portfolio") portfolio
+                li
+                    a(href="#contact") contact
 
         <!----- ABOUT ------>
 
         section#about.section-about
             h2 ABOUT
-            div.about-me
-                img(src='assets/img/myphoto.jpg')
-                h3 Who's this guy?
-                p I'm the Front-End Developer for EyeCue Lab in Portland, OR.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.
-            div.skills 
-                h3 My skills
-                div.skills-container
-                    div.bar 
-                        .bar1
-                            .tag HTML5
-                    div.bar
-                        .bar2 
-                            .tag CSS3
-                    div.bar
-                        .bar3 
-                            .tag JavaScript / ES6
-                    div.bar
-                        .bar4 
-                            .tag React
-                    div.bar
-                        .bar5 
-                            .tag jQuery / AJAX
-                    div.bar
-                        .bar6 
-                            .tag XML / XHTML
-                    div.bar
-                        .bar7 
-                            .tag SASS / LESS / Stylus
-                    div.bar
-                        .bar8 
-                            .tag Pug
-                    div.bar
-                        .bar9 
-                            .tag Git / Github
-                    div.bar
-                        .bar10 
-                            .tag Webpack / Babel
-                    div.bar
-                        .bar11 
-                            .tag NPM
-                    div.bar
-                        .bar12 
-                            .tag Adobe Photoshop
-                    div.bar
-                        .bar13 
-                            .tag Axure / Figma
+            div.flex
+                div.about-me
+                    h3 Who's this guy?
+                    img(src='assets/img/myphoto.jpg')
+                    p I'm the Front-End Developer for Illumina Lab in San Diego, CA.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.
+                div.skills 
+                    h3 My skills
+                    div.skills-container
+                        div.bar 
+                            .bar1
+                            p 90% 
+                                
+                        div.bar 
+                            .bar2 
+                            p 80%    
+                        div.bar
+                            .bar3 
+                            p 70%   
+                        div.bar
+                            .bar4 
+                            p 20%  
+                        div.bar
+                            .bar5 
+                            p 90%    
+                        div.bar
+                            .bar6 
+                            p 80%    
+                        div.bar
+                            .bar7 
+                            p 90%    
+                        div.bar
+                            .bar8 
+                            p 90%    
+                        div.bar
+                            .bar9 
+                            p 75%    
+                        div.bar
+                            .bar10 
+                            p 70%    
+                        div.bar
+                            .bar11 
+                            p 80%    
+                        div.bar
+                            .bar12 
+                            p 50%    
+                        div.bar
+                            .bar13 
+                            p 50%    
 
         <!----- PORTFOLIO ------>
 
