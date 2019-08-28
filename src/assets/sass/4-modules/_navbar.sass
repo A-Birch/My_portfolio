@@ -1,13 +1,10 @@
-$background-color-nav: #584B4F //444649
-$font-color-nav: #EBD0A5
-$font-color-nav-hover: #BE3F22
 
 nav
    display: flex
    background-color: $background-color-nav
    align-content: center
    height: 40px
-   border-bottom: 3px solid #D36E2D
+   border-bottom: 3px solid $nav-border-bottom-color
    
 .main-nav
     display: flex
@@ -17,7 +14,7 @@ nav
 
 .main-nav li
     display: flex
-    margin-left: 60px
+    margin-left: 80px
     
 
 .main-nav li a:link,
@@ -27,7 +24,7 @@ nav
 	text-decoration: none
 	//text-transform: uppercase
 	font-size: 100%
-	transition: color 0.6s
+	transition: color 0.4s
 
 .main-nav li a:hover,
 .main-nav li a:active 

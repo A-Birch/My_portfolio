@@ -1,6 +1,14 @@
 
-.flex
-    display: flex
 
-section 
-	padding: 80px 0
+section
+    padding: 100px 0
+        
+
+#portfolio
+    background-color: $portfolio-bg-color
+
+.section-about,
+.section-portfolio,
+.section-contact
+    +wrapper()
+    justify-content: center

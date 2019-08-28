@@ -7,6 +7,7 @@ html
             
             div.hero-text-box
                 h1 Hello, I'm Alex Berezkin<br/>I'm a web developer
+                a.btn.offset(href="#portfolio") view my projects
         nav
             ul.main-nav
                 li
@@ -20,14 +21,14 @@ html
 
         <!----- ABOUT ------>
 
-        section#about.section-about
+        section#about
             h2 ABOUT
-            div.flex
+            div.section-about
                 div.about-me
                     h3 Who's this guy?
                     img(src='assets/img/myphoto.jpg')
                     p I'm the Front-End Developer for Illumina Lab in San Diego, CA.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.
-                div.skills 
+                div.skills
                     h3 My skills
                     div.skills-container
                         div.bar 
@@ -73,20 +74,33 @@ html
 
         <!----- PORTFOLIO ------>
 
-        section#portfolio.section-portfolio
+        section#portfolio
             h2 PROJECTS
-            div
-            div
-            div
-            div
-            div
-            div
+            div.section-portfolio
+                div.project-1
+                    a(href="#")
+                        img(src='../assets/img/project.png')
+                div.project-2
+                    a(href="#")
+                        img(src='../assets/img/project.png')
+                div.project-3
+                    a(href="#")
+                        img(src='../assets/img/project.png')
+                div.project-4
+                    a(href="#")
+                        img(src='../assets/img/project.png')
+                div.project-5
+                    a(href="#")
+                        img(src='../assets/img/project.png')
+                div.project-6
+                    a(href="#")
+                        img(src='../assets/img/project.png')
 
         <!----- CONTACT ------>
-        section#contact.section-contact
+        section#contact
             h2 CONTACT
             p Have a question or want to work together?
-            form(name="contact-form", method="post")
+            form.section-contact(name="contact-form", method="post")
                 div
                     input(
                         type='text'
@@ -96,8 +110,8 @@ html
                 div
                     input(
                         type='text'
-                        name='name'
-                        placeholder="Name"
+                        name='email'
+                        placeholder="Enter email"
                     )
                 div
                     textarea Your Message
