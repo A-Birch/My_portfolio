@@ -98,27 +98,8 @@ html
 
         <!----- CONTACT ------>
         section#contact
-            h2 CONTACT
+            h2 HIRE ME
             p Have a question or want to work together?
-            form.section-contact(name="contact-form", method="post")
-                div
-                    input(
-                        type='text'
-                        name='name'
-                        placeholder="Name"
-                    )
-                div
-                    input(
-                        type='text'
-                        name='email'
-                        placeholder="Enter email"
-                    )
-                div
-                    textarea Your Message
-                
-                input(
-                    type='submit'
-                    value='Submit'
-                )
+            include ./modules/contact-form.pug
         footer
         

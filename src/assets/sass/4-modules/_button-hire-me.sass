@@ -1,0 +1,18 @@
+=transition 
+    transition: all .25s
+
+.btn-hire-me
+    padding: .5rem 1.75rem
+    background: #fff
+    font-size: .95rem
+    color: $font-color-regular
+    border-color: $font-color-regular
+    font-weight: 600
+    float: right
+    margin-top: 10px
+    
+    +transition
+    &:hover,
+    &:focus 
+        background: $font-color-btn-link
+        border-color: darken($font-color-btn-link, 10%)
