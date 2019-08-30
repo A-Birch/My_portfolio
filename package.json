@@ -55,6 +55,8 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "chance": "^1.0.18",
+    "html2canvas": "^1.0.0-rc.3",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.10"
   }

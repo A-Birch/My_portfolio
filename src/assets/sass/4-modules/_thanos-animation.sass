@@ -1,0 +1,47 @@
+$quickFade-time: 1.5s
+$fade-time: 2s
+$blur-time: 2s
+$blur-amount: 0.188em
+
+#hero-text 
+  position: relative
+
+
+.dust 
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  filter: blur(.05em)
+
+
+.quickFade
+  animation: fadeout $quickFade-time linear forwards
+
+
+.fade 
+  animation: fadeout $fade-time linear forwards
+
+
+@keyframes fadeout 
+  0%  
+      opacity: 1
+  100%  
+      opacity: 0
+
+
+.blur 
+  animation: fadeblur $blur-time ease-in forwards
+
+
+@keyframes fadeblur 
+  0%  
+    opacity: 1
+    filter: blur(0.05em)
+  
+  80% 
+    filter: blur($blur-amount)
+  
+  100% 
+    opacity: 0
+  

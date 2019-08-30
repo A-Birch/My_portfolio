@@ -5,9 +5,9 @@ html
         header#header
             include ./modules/header-bg.pug
             
-            div.hero-text-box
+            div#hero-text.hero-text-box
                 h1 Hello, I'm Alex Berezkin<br/>I'm a web developer
-                a.btn.offset(href="#portfolio") view my projects
+                a.btn#start-btn.offset(href="#", data-target="#hero-text") view my projects
         nav
             ul.main-nav
                 li
