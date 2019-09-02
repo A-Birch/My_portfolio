@@ -5,9 +5,18 @@ html
         header#header
             include ./modules/header-bg.pug
             
-            div#hero-text.hero-text-box
-                h1 Hello, I'm Alex Berezkin<br/>I'm a web developer
-                a.btn#start-btn.offset(href="#", data-target="#hero-text") view my projects
+            div.hero-text-box
+                div#hero-text
+                    h1 Hello, I'm <br>Alex Berezkin
+                    p I'm a web developer
+                    a.btn#start-btn.offset(href="#portfolio", data-target="#hero-text") view my projects
+            .aside
+                div.animated.bounceInDown.slower
+                    i.fab.fa-github.fa-2x
+                div.animated.bounceInDown.slow
+                    i.fab.fa-linkedin.fa-2x
+                div.animated.bounceInDown.fast
+                    i.far.fa-file.fa-2x
         nav
             ul.main-nav
                 li
@@ -77,29 +86,20 @@ html
         section#portfolio
             h2 PROJECTS
             div.section-portfolio
-                div.project-1
-                    a(href="#")
-                        img(src='../assets/img/project.png')
-                div.project-2
-                    a(href="#")
-                        img(src='../assets/img/project.png')
-                div.project-3
-                    a(href="#")
-                        img(src='../assets/img/project.png')
-                div.project-4
-                    a(href="#")
-                        img(src='../assets/img/project.png')
-                div.project-5
-                    a(href="#")
-                        img(src='../assets/img/project.png')
-                div.project-6
-                    a(href="#")
-                        img(src='../assets/img/project.png')
+                include ./modules/project-card.pug
+                include ./modules/project-card.pug
+                include ./modules/project-card.pug
+                include ./modules/project-card.pug
+                include ./modules/project-card.pug
+                include ./modules/project-card.pug
+                    
+                
+                
 
         <!----- CONTACT ------>
         section#contact
             h2 HIRE ME
             p Have a question or want to work together?
             include ./modules/contact-form.pug
-        footer
-        
+
+        include ./modules/footer.pug

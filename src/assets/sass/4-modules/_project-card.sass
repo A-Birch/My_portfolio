@@ -1,0 +1,133 @@
+$big-stone: #152536
+$white: #fff
+$smalt-blue: #4e958b
+$maroon-flush: #C32361
+$black: #000
+$lite-grey: rgba($black, .2)
+$lite-big-stone: rgba($big-stone, .7)
+
+$card-width: 350px
+$card-height: 350px
+
+$thumb-height: 260px
+$radius-card: 3px
+$box-shadow: 0 1px 4px rgba($black, .3)
+$transition-card: cubic-bezier(.17,.67,.5,1.03)
+$timing-1: .4s .15s
+$timing-2: .5s .25s
+
+
+=pos($pos, $left: null, $top: null, $right: null, $bottom: null) 
+    position: $pos
+    left: $left
+    @if $top 
+        top: $top  
+    @if $left 
+        left: $left 
+    @if $right 
+        right: $right
+    @if $bottom 
+        bottom: $bottom
+
+
+=size($width, $height) 
+    width: $width
+    height: $height
+    margin: 5px
+
+.section-portfolio
+    display: flex
+    a[href] 
+        position: relative
+        &:hover,
+        &:link, 
+        &:visited, 
+        &:active 
+            text-decoration: none
+            color: lighten($maroon-flush, 5)
+            text-shadow: 2px 2px 2px darken($big-stone, 10)
+            padding-bottom: 3px
+            font-weight: bold
+        
+        &::after 
+            content: ""
+            +pos(absolute)
+            background: $white
+            +size(0, 1px)
+            transition: .35s $transition-card
+        
+        &:hover::after 
+            width: 100%
+            box-shadow: $box-shadow
+    
+
+
+.note 
+    margin-top: 30px
+    color: $white
+    font-size: 1rem
+    line-height: 1.5
+    text-align: center
+
+
+.card 
+    +size($card-width, $card-height)
+    border-radius: $radius-card
+    box-shadow: $box-shadow
+    overflow: hidden
+    .thumb 
+        +size(auto, $thumb-height)
+        background: url(/assets/img/project.png) no-repeat center
+        background-size: cover
+        border-radius: $radius-card
+    .infos 
+        +size(auto, $card-height)
+        position: relative
+        padding: 14px 24px
+        background: $white
+        transition: $timing-1 $transition-card
+        .title 
+            position: relative
+            margin: 10px 0
+            letter-spacing: 3px
+            color: $big-stone
+            font-size: 1rem
+            text-transform: uppercase
+            text-shadow: 0 0 0px lighten($big-stone, 20)
+        .date, .seats 
+            margin-bottom: 10px
+            text-transform: uppercase
+            font-size: .85rem
+            color: $lite-big-stone
+        .seats 
+            display: inline-block
+            margin-bottom: 24px
+            padding-bottom: 24px
+            border-bottom: 1px solid $lite-grey
+            opacity: 0
+            transition: $timing-2 $transition-card
+        .txt 
+            
+            line-height: 2
+            font-size: .95rem
+            color: $lite-big-stone
+            opacity: 0
+            transition: $timing-2 $transition-card
+        .details 
+            +pos(absolute, $left: 0, $bottom: 0)
+            margin: 10px 0
+            padding: 20px 24px
+            letter-spacing: 1px
+            color: $smalt-blue
+            font-size: .9rem
+            text-transform: uppercase
+            cursor: pointer
+            opacity: 0
+            transition: $timing-2 $transition-card
+    
+    &:hover .infos 
+        transform: translateY(-$thumb-height)
+        .seats,.txt,.details 
+            opacity: 1
+        
+    
