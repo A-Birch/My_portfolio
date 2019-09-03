@@ -12,9 +12,11 @@ html
                     a.btn#start-btn.offset(href="#portfolio", data-target="#hero-text") view my projects
             .aside
                 div.animated.bounceInDown.slower
-                    i.fab.fa-github.fa-2x
+                    a(href='https://github.com/AlexBerezkin' target='blank') 
+                        i.fab.fa-github.fa-2x
                 div.animated.bounceInDown.slow
-                    i.fab.fa-linkedin.fa-2x
+                    a(href='https://www.linkedin.com/in/alexberezkin' target='blank')
+                        i.fab.fa-linkedin.fa-2x
                 div.animated.bounceInDown.fast
                     i.far.fa-file.fa-2x
         nav
@@ -33,11 +35,11 @@ html
         section#about
             h2 ABOUT
             div.section-about
-                div.about-me
+                div.about-me.wow.slideInLeft(data-wow-duration="2s")
                     h3 Who's this guy?
                     img(src='assets/img/myphoto.jpg')
                     p I'm the Front-End Developer for Illumina Lab in San Diego, CA.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.
-                div.skills
+                div.skills.wow.slideInRight(data-wow-duration="2s")
                     h3 My skills
                     div.skills-container
                         div.bar 
@@ -85,19 +87,20 @@ html
 
         section#portfolio
             h2 PROJECTS
-            div.section-portfolio
+            div.section-portfolio.wow.fadeInUp(data-wow-offset="10")
                 include ./modules/project-card.pug
-                include ./modules/project-card.pug
-                include ./modules/project-card.pug
-                include ./modules/project-card.pug
-                include ./modules/project-card.pug
-                include ./modules/project-card.pug
-                    
                 
-                
+                +card(src1, head1, txt1, href1)               
+                +card(src2, head2, txt2, href2)               
+                +card(src3, head3, txt3, href3)               
+                +card(src4, head4, txt4, href4)               
+                +card(src5, head5, txt5, href5)               
+                +card(src6, head6, txt6, href6)      
+
+                       
 
         <!----- CONTACT ------>
-        section#contact
+        section#contact.wow.zoomIn(data-wow-duration="2s")
             h2 HIRE ME
             p Have a question or want to work together?
             include ./modules/contact-form.pug

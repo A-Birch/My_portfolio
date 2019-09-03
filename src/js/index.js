@@ -1,5 +1,10 @@
 import html2canvas from 'html2canvas';
 import $ from 'jquery'
+
+const WOW = require('wowjs'); 
+window.wow = new WOW.WOW({ live: false });
+//new WOW().init();
+wow.init();
 /*
 // THANOS ANIMATION
 

@@ -18,6 +18,10 @@ import 'jquery/dist/jquery.js'
 //animate.css
 import 'animate.css/animate.min.css'
 
+//wow.js
+//import 'wow.js/src/WOW.js'
+import wow from 'wowjs'
+const WOW = require('wowjs');
 
 
 // CSS (example)
