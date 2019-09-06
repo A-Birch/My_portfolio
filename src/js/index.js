@@ -5,6 +5,7 @@ const WOW = require('wowjs');
 window.wow = new WOW.WOW({ live: false });
 //new WOW().init();
 wow.init();
+
 /*
 // THANOS ANIMATION
 
@@ -182,10 +183,26 @@ animateCSS('.hero-text-box', 'bounceInLeft'); //bounceInLeft
 
 //import $ from 'jquery'
 
+ 	// For the sticky navigation 
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 $(document).ready(function () {
 
-// 	/* For the sticky navigation */
-// 	$('.js--section-features').waypoint(function(direction) {
+
+
+// 	$('#about').wow(function(direction) {
 // 		if (direction == "down") {
 // 			$('nav').addClass('sticky');
 // 		} else {
@@ -244,24 +261,34 @@ $(document).ready(function () {
 	// 	offset: '50%'
 	// });
 
-	/* Mobile navigation */
+  /* Mobile navigation */
+	
+	// $('.js--nav-icon').click(function () {
+	// 	var nav = $('.js--main-nav');
+  //   var icon = $('.icon');
+  //   console.log(icon);
+    
+		
+  //   nav.slideToggle(200);
+    
+  //   // $(this)
+	// 	//     .find('[data-fa-i2svg]')
+  //   //     .toggleClass('far fa-window-close')
+  //   //     .toggleClass('fas fa-bars');
+	
+	// });
 
-	$('.js--nav-icon').click(function () {
-		var nav = $('.js--main-nav');
-		var icon = $('.js--nav-icon i');
+ });
 
-		nav.slideToggle(200);
+ document.addEventListener('DOMContentLoaded', function () {
+  $('.js--nav-icon').on('click', function () {
+    var nav = $('.js--main-nav');
+    
+    nav.slideToggle(200);
 
-		if (icon.hasClass('icon-menu-button-of-three-horizontal-lines')) {
-			icon.addClass('icon-cancel-mark');
-			icon.removeClass('icon-menu-button-of-three-horizontal-lines');
-		} else {
-			icon.addClass('icon-menu-button-of-three-horizontal-lines');
-			icon.removeClass('icon-cancel-mark');
-		}
-
-	});
-
-
+    $(this)
+      .find('[data-fa-i2svg]')
+      .toggleClass('far fa-window-close')
+      .toggleClass('fas fa-bars');
+  });
 });
-  

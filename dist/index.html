@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head><link href="assets/css/vendors.d3dd987e9ca9fb58293b.css" rel="stylesheet"><link href="assets/css/app.d3dd987e9ca9fb58293b.css" rel="stylesheet"></head>
+  <head><link href="assets/css/vendors.fa8db79f629a49b1a664.css" rel="stylesheet"><link href="assets/css/app.fa8db79f629a49b1a664.css" rel="stylesheet"></head>
   <body>
     <header id="header">
-<ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
-  <li class="layer" id="specks" data-depth="0.1"></li>
-  <l class="layer" id="layer-1" data-depth="0.15">
-    <div class="img" id="img-1"></div>
-  </l>
-  <li class="layer" id="layer-2" data-depth="0.25">
-    <div class="img" id="img-2"></div>
-  </li>
-  <li class="layer" id="layer-3" data-depth="0.45">
-    <div class="img" id="img-3"></div>
-  </li>
-</ul>
       <div class="hero-text-box">
-        <h1>Hello, I'm Alex Berezkin<br/>I'm a web developer</h1>
+        <div id="hero-text">
+          <h1>Hello, I'm <br>Alex Berezkin</h1>
+          <p>I'm a web developer</p><a class="btn offset" id="start-btn" href="#portfolio" data-target="#hero-text">view my projects</a>
+        </div>
+      </div>
+      <div class="aside">
+        <div class="animated bounceInDown slower"><a href="https://github.com/AlexBerezkin" target="blank"> <i class="fab fa-github fa-2x"></i></a></div>
+        <div class="animated bounceInDown slow"><a href="https://www.linkedin.com/in/alexberezkin" target="blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+        <div class="animated bounceInDown fast"><i class="far fa-file fa-2x"></i></div>
       </div>
     </header>
-    <nav>
-      <ul class="main-nav">
+    <nav id="navbar">
+      <ul class="main-nav js--main-nav">
         <li><a href="#header">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#portfolio">portfolio</a></li>
         <li><a href="#contact">contact</a></li>
-      </ul>
+      </ul><a class="mobile-nav-icon js--nav-icon"> <i class="fas fa-bars"></i></a>
     </nav><!----- ABOUT ------>
-    <section class="section-about" id="about">
+    <section id="about">
       <h2>ABOUT</h2>
-      <div class="flex">
-        <div class="about-me">
+      <div class="section-about">
+        <div class="about-me wow slideInLeft" data-wow-duration="2s">
           <h3>Who's this guy?</h3><img src="assets/img/myphoto.jpg">
           <p>I'm the Front-End Developer for Illumina Lab in San Diego, CA.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.</p>
         </div>
-        <div class="skills"> 
+        <div class="skills wow slideInRight" data-wow-duration="2s">
           <h3>My skills</h3>
           <div class="skills-container">
             <div class="bar"> 
@@ -93,31 +89,76 @@
         </div>
       </div>
     </section><!----- PORTFOLIO ------>
-    <section class="section-portfolio" id="portfolio">
+    <section id="portfolio">
       <h2>PROJECTS</h2>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="section-portfolio wow fadeInUp" data-wow-offset="10">
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>SmartFood App</h1>
+                    <p>First project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>Sedona website</h1>
+                    <p>Second project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>Recipe Book App</h1>
+                    <p>Third project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>KiKi</h1>
+                    <p>Fourth project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>Quiz Game</h1>
+                    <p>Fifth project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+                <div class="card"><img src="assets/img/project.png">
+                  <div class="info">
+                    <h1>Pizza Order Form</h1>
+                    <p>Sixth project</p><a href="#">VIEW SITE</a>
+                  </div>
+                </div>
+      </div>
     </section><!----- CONTACT ------>
-    <section class="section-contact" id="contact">
-      <h2>CONTACT</h2>
+    <section class="wow zoomIn" id="contact" data-wow-duration="2s">
+      <h2>HIRE ME</h2>
       <p>Have a question or want to work together?</p>
-      <form name="contact-form" method="post">
-        <div>
-          <input type="text" name="name" placeholder="Name">
-        </div>
-        <div>
-          <input type="text" name="name" placeholder="Name">
-        </div>
-        <div>
-          <textarea>Your Message</textarea>
-        </div>
-        <input type="submit" value="Submit">
-      </form>
+<form>
+  <fieldset>
+    <label for="name">Name
+      <input id="name" required name="name" autocomplete="name" autocorrect="off" type="text">
+    </label>
+    <label for="email">Enter your email
+      <input id="email" required name="email" autocomplete="street-address" autocorrect="off" type="email">
+    </label>
+    <label for="delivery-instructions">Your message 
+      <textarea id="delivery-instructions" name="textarea" dir="auto"></textarea>
+    </label>
+  </fieldset>
+  <input name="submit" type="submit" value="HIRE ME">
+</form>
     </section>
-    <footer></footer>
-  <script type="text/javascript" src="assets/js/vendors.d3dd987e9ca9fb58293b.js"></script><script type="text/javascript" src="assets/js/app.d3dd987e9ca9fb58293b.js"></script></body>
+<footer>
+  <div>
+    <ul class="social-links">
+      <li><a href="https://github.com/AlexBerezkin" target="blank"> <i class="fab fa-github fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/alexberezkin" target="blank"> <i class="fab fa-linkedin fa-2x"></i></a></li>
+      <li><a href="https://codepen.io" target="blank"> <i class="fab fa-codepen fa-2x"></i></a></li>
+    </ul>
+  </div>
+  <div class="m">
+    <p>Alex Berezkin ©2019</p>
+  </div>
+</footer>
+  <script type="text/javascript" src="assets/js/vendors.fa8db79f629a49b1a664.js"></script><script type="text/javascript" src="assets/js/app.fa8db79f629a49b1a664.js"></script></body>
 </html>

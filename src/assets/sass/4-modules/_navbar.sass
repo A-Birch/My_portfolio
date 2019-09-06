@@ -3,8 +3,9 @@ nav
     display: flex
     background-color: $background-color-nav
     align-content: center
-    height: 40px
+    //height: 40px
     border-bottom: 3px solid $nav-border-bottom-color
+    //overflow: hidden
 
 .main-nav
     display: flex
@@ -36,3 +37,73 @@ nav
             &:hover,
             &:active 
                 color: $font-color-nav-hover
+
+
+    /* Sticky navi */
+  
+.sticky 
+	position: fixed
+	top: 0
+    left: 0
+	width: 100%
+	z-index: 9999
+
+/* Mobile navi */
+
+.mobile-nav-icon 
+	display: inline-block
+	font-size: 200%
+    display: none
+
+
+.mobile-nav-icon 
+	margin: 10px
+	cursor: pointer
+	display: none
+
+
+    /* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) 
+    
+    nav 
+        display: block
+              
+    .main-nav
+        display: none
+        
+
+  
+    .mobile-nav-icon 
+       display: inline-block
+       float: right
+
+
+                      
+    .main-nav 
+       float: left
+
+    .main-nav 
+        li 
+            display: block
+            margin-left: 20px
+            font-size: 150%
+                          
+    .main-nav li a:link,
+    .main-nav li a:visited 
+        display: block
+        border: 0
+        padding: 10px 0
+        
+            
+    .sticky .main-nav 
+        margin-top: 10px
+            
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited 
+        padding: 10px 0
+
+    .sticky .mobile-nav-icon 
+        margin-top: 10px
+                
+    .sticky .mobile-nav-icon i 
+       color: $font-color-nav
