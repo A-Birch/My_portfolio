@@ -61,6 +61,7 @@
     "chance": "^1.0.18",
     "html2canvas": "^1.0.0-rc.3",
     "normalize.css": "^8.0.1",
+    "particles.js": "^2.0.0",
     "vue": "^2.6.10",
     "wowjs": "^1.1.3"
   }

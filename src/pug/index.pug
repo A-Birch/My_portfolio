@@ -4,13 +4,14 @@ html
     body
         header#header
             include ./modules/header-bg.pug
-            
             div.hero-text-box
                 div#hero-text
                     h1 Hello, I'm <br>Alex Berezkin
-                    p I'm a web developer
+                    p I'm a front-end web developer
                     a.btn#start-btn.offset(href="#portfolio", data-target="#hero-text") view my projects
-            .aside
+                include ./modules/mouse-scroll-icon.pug
+                
+            div.aside
                 div.animated.bounceInDown.slower
                     a(href='https://github.com/AlexBerezkin' target='blank') 
                         i.fab.fa-github.fa-2x
@@ -31,7 +32,8 @@ html
                     a(href="#contact") contact
             a.mobile-nav-icon.js--nav-icon 
                 i.fas.fa-bars
-            
+        
+             
 
         <!----- ABOUT ------>
 
@@ -90,7 +92,7 @@ html
 
         section#portfolio
             h2 PROJECTS
-            div.section-portfolio.wow.fadeInUp(data-wow-offset="10")
+            div.section-portfolio.wow.fadeInUp(data-wow-offset="500")
                 include ./modules/project-card.pug
                 
                 +card(src1, head1, txt1, href1)               

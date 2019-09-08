@@ -23,6 +23,7 @@ import 'animate.css/animate.min.css'
 import wow from 'wowjs'
 const WOW = require('wowjs');
 
+import 'particles.js/particles.js'
 
 // CSS (example)
 import './assets/css/main.css'
