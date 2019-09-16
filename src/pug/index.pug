@@ -8,7 +8,7 @@ html
                 div#hero-text
                     h1 Hello, I'm <br>Alex Berezkin
                     p I'm a front-end web developer
-                    a.btn#start-btn.offset(href="#portfolio", data-target="#hero-text") view my projects
+                    a.btn(href="#portfolio") view my projects
                 include ./modules/mouse-scroll-icon.pug
                 
             div.aside
@@ -43,7 +43,7 @@ html
                 div.about-me.wow.slideInLeft(data-wow-duration="2s")
                     h3 Who's this guy?
                     img(src='assets/img/myphoto.jpg')
-                    p I'm the Front-End Developer for Illumina Lab in San Diego, CA.<br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.<br/>Let's make something special.
+                    p I'm the Front-End Web Developer from sunny San Diego in beautiful California. I have strong passion for anything web related. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I am always up to study a new features in the web industry.<br/>
                 div.skills.wow.slideInRight(data-wow-duration="2s")
                     h3 My skills
                     div.skills-container
@@ -95,12 +95,7 @@ html
             div.section-portfolio.wow.fadeInUp(data-wow-offset="500")
                 include ./modules/project-card.pug
                 
-                +card(src1, head1, txt1, href1)               
-                +card(src2, head2, txt2, href2)               
-                +card(src3, head3, txt3, href3)               
-                +card(src4, head4, txt4, href4)               
-                +card(src5, head5, txt5, href5)               
-                +card(src6, head6, txt6, href6)      
+                   
 
                        
 

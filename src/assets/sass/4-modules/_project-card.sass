@@ -2,66 +2,88 @@
 .card
 	width: 350px
 	height: 350px
-	//border-radius: 15px
-	padding: 1.5rem
-	background: white
+	background: #fff
 	position: relative
-	display: flex
-	align-items: flex-end
-	transition: 0.4s ease-out
-	//box-shadow: 0px 7px 10px rgba(black, 0.5)
-	&:hover
-		//transform: translateY(20px)
-		&:before
-			opacity: 1
-		.info
-			opacity: 1
-			transform: translateY(0px)
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		display: block
-		width: 100%
+	overflow: hidden
+	border: 1px solid $bar-color
+	.project1 
+		background: url('../img/smart-food.jpeg') no-repeat
+	.project2
+		background: url('../img/The-Budget-App-Project.jpeg') no-repeat
+	.project3
+		background: url('../img/sedona.jpeg') no-repeat
+	.project4
+		background: url('../img/pizza-order-form.jpeg') no-repeat
+	.project5
+		background: url('../img/Pig-game.jpeg') no-repeat
+	.project6
+		background: url('../img/cona.jpeg') no-repeat
+		
+	span 
 		height: 100%
-		//border-radius: 15px
-		background: rgba(black, 0.9)
-		z-index: 2
-		transition: 0.5s
-		opacity: 0
-	img
-		width: 100%
-		height: 100%
-		object-fit: cover
-		position: absolute
-		top: 0
 		left: 0
-		//border-radius: 15px
+		position: absolute
+		width: 100%
+		transition: 1s
+		&:nth-child(1) 
+			z-index: 10
+			width: 25%
+			transition-delay: 0
+		&:nth-child(2) 
+			z-index: 9
+			width: 50%
+			transition-delay: .3s
+		&:nth-child(3) 
+			z-index: 8
+			width: 75%
+			transition-delay: .6s
+		&:nth-child(4) 
+			z-index: 7
+			width: 100%
+			transition-delay: .8s
 
-	.info
-		position: relative
-		z-index: 3
-		color: white
-		opacity: 0
-		transform: translateY(30px)
-		transition: 0.5s
-		h1
-			margin: 0px
-		p
-			letter-spacing: 1px
-			font-size: 15px
-			margin-top: 8px
-		button
-			padding: 0.6rem
-			outline: none
-			border: none
-			border-radius: 3px
-			background: white
-			color: black
-			font-weight: bold
-			cursor: pointer
-			transition: 0.4s ease
-			&:hover
-				background: dodgerblue
-				color: white
+.card
+	&:hover
+		span 
+			transform: translateY(-100%)
+			transition: 1s
+			&:nth-child(1) 
+				transition-delay: 0.8s
+			&:nth-child(2) 
+				transition-delay: 0.6s
+			&:nth-child(3) 
+				transition-delay: 0.3s
+			&:nth-child(4) 
+				transition-delay: 0s
+
+.card-content
+	color: #000
+	font: $font-second
+	text-align: center
+	padding: 50px 20px
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+	transform: translateY(100%)
+	transition: 2s
+	h1 
+		font-weight: 300
+		font-size: 2rem
+	p 
+		color: #000000
+		font-weight: 300
+	a 
+		width: 100px
+		font-size: 0.7rem
+		border: 2px solid $font-color-btn-link
+		display: block
+		margin: auto
+		padding: 10px
+		color: #000
+		&:hover
+			background-color: $font-color-btn-link
+
+.card
+	&:hover 
+		.card-content 
+			transform: translateY(0%)

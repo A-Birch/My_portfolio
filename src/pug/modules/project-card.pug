@@ -1,40 +1,48 @@
 
 //- assets/img/project.png
 
-- var src1 = 'assets/img/project.png'
-- var src2 = 'assets/img/project.png'
-- var src3 = 'assets/img/project.png'
-- var src4 = 'assets/img/project.png'
-- var src5 = 'assets/img/project.png'
-- var src6 = 'assets/img/project.png'
+- var src1 = 'project1' //'assets/img/project.png'
+- var src2 = 'project2'//'assets/img/project.png'
+- var src3 = 'project3' //'assets/img/project.png'
+- var src4 = 'project4' //'assets/img/project.png'
+- var src5 = 'project5' //'assets/img/project.png'
+- var src6 = 'project6' //'assets/img/project.png'
 
-- var head1 = 'SmartFood App'
-- var head2 = 'Sedona website'
-- var head3 = 'Recipe Book App'
-- var head4 = 'CoNa'
-- var head5 = 'Quiz Game'
-- var head6 = 'Pizza Order Form'
+- var head1 = 'Smart Food App'
+- var head2 = 'The Budget App Project'
+- var head3 = 'Sedona website'
+- var head4 = 'Pizza order form'
+- var head5 = 'Pig Game'
+- var head6 = 'CoNa'
 
-- var txt1 = 'First project'
-- var txt2 = 'Second project'
-- var txt3 = 'Third project'
-- var txt4 = 'Fourth project'
-- var txt5 = 'Fifth project'
-- var txt6 = 'Sixth project'
+- var txt1 = 'Responsive single page app built with HTML5, CSS3, jQuery.'
+- var txt2 = 'The budget app built with pure JavaScript.'
+- var txt3 = 'Responsive single page built with HTML5, CSS3. (Russian language)'
+- var txt4 = 'Responsive order form built with pure JavaScript, Bootstrap 4. Validation of input fields are checked by RegEx (no HTML5 validation).'
+- var txt5 = 'Funny pig game built with pure JavaScript.'
+- var txt6 = 'Single page built with HTML5, CSS3.'
 
-- var href1 = '#'
-- var href2 = '#'
-- var href3 = '#'
-- var href4 = '#'
-- var href5 = '#'
-- var href6 = '#'
+- var href1 = 'http://smart-food.tk/'
+- var href2 = 'https://alexberezkin.github.io/The-Budget-App-Project/'
+- var href3 = 'http://sedona.ml/'
+- var href4 = 'https://alexberezkin.github.io/Final_JavaScript/'
+- var href5 = 'https://alexberezkin.github.io/Pig-game/'
+- var href6 = 'http://cona-cona.tk/'
 
-mixin card(src, head, text, href)
+mixin card(num, head, text, href)
     .card
-        img(src= src)
-        .info
+        span(class= num)
+        span(class= num)
+        span(class= num)
+        span(class= num)
+        .card-content
             h1= head
             p= text
-            a(href= href) VIEW SITE
+            a(href= href target="blank") VIEW SITE
 
-    
++card(src1, head1, txt1, href1)               
++card(src2, head2, txt2, href2)               
++card(src3, head3, txt3, href3)               
++card(src4, head4, txt4, href4)               
++card(src5, head5, txt5, href5)               
++card(src6, head6, txt6, href6)

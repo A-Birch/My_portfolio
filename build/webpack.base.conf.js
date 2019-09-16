@@ -7,7 +7,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 
 
 // Main const
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
+
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -15,7 +15,7 @@ const PATHS = {
 }
 
 // Pages const for HtmlWebpackPlugin
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
+
 // const PAGES_DIR = PATHS.src
 const PAGES_DIR = `${PATHS.src}/pug/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
@@ -75,11 +75,15 @@ module.exports = {
         name: '[name].[ext]'
       }
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
+      test: /\.(png|jpg|jpeg|gif|svg)$/,
+      loader: 'url-loader?limit=100000',
       options: {
         name: '[name].[ext]'
-      }
+      }//,
+      // loader: 'file-loader',
+      // options: {
+      //   name: '[name].[ext]'
+      // }
     }, {
       test: /\.(sc|sa)ss$/,
       use: [
@@ -123,17 +127,16 @@ module.exports = {
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.dist}/${PATHS.assets}img` },
+      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.dist}/${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/static`, to: `${PATHS.dist}/static` },
     ]),
 
     // Automatic creation any html pages (Don't forget to RERUN dev server)
-    // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
-    // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
+
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`,
+      filename: `./${page.replace(/\.pug/, '.html')}`,
     }))
   ]
 }
