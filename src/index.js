@@ -4,8 +4,6 @@ import './js/'
 // SCSS
 //import './assets/scss/main.scss'
 
-// SASS
-import './assets/sass/main.sass'
 
 // webfonts
 import '@fortawesome/fontawesome-free/js/fontawesome'
@@ -18,12 +16,17 @@ import 'jquery/dist/jquery.js'
 //animate.css
 import 'animate.css/animate.min.css'
 
+import 'include-media/dist/_include-media.scss'
+// SASS
+import './assets/sass/main.sass'
+
 //wow.js
 //import 'wow.js/src/WOW.js'
 import wow from 'wowjs'
 const WOW = require('wowjs');
 
 import 'particles.js/particles.js'
+
 
 // CSS (example)
 import './assets/css/main.css'

@@ -1,6 +1,8 @@
 doctype html
 html
     head
+        title Alex's portfolio
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
     body
         header#header
             include ./modules/header-bg.pug
@@ -20,6 +22,18 @@ html
                         i.fab.fa-linkedin.fa-2x
                 div.animated.bounceInDown.fast
                     i.far.fa-file.fa-2x
+
+            div.mobile-aside
+                div.animated.bounceInLeft.slower
+                    a(href='https://github.com/AlexBerezkin' target='blank') 
+                        i.fab.fa-github.fa-2x
+                div.animated.bounceInLeft.slow
+                    a(href='https://www.linkedin.com/in/alexberezkin' target='blank')
+                        i.fab.fa-linkedin.fa-2x
+                div.animated.bounceInLeft.fast
+                    a(href='#' target='blank')
+                        i.far.fa-file.fa-2x
+            
         nav#navbar
             ul.main-nav.js--main-nav
                 li

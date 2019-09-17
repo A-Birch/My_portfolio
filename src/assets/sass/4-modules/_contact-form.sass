@@ -5,9 +5,9 @@ form:focus-within
   transform: scale(1.025)
   
   // Remove the scaling for those who don't want animation.
-  @media screen and (prefers-reduced-motion: reduce) 
-    box-shadow: none
-    transform: none 
+  // @media screen and (prefers-reduced-motion: reduce) 
+  //   box-shadow: none
+  //   transform: none 
   
 
 
@@ -48,10 +48,10 @@ form
   transition: map-get($transition, speed-slow) box-shadow map-get($transition, easing),map-get($transition, speed-slow) transform map-get($transition, easing)
   
   // Media Queries
-  @media screen and (min-width: 35em) 
-    max-width: 70vw
-    padding: 3em 2em 0.5em 2em
-
+  @media screen and (max-width: $tablet - 1) 
+    max-width: 90vw
+    padding: 2em 2em 0.5em 2em
+    
 fieldset
   border: none
   margin-bottom: 2em

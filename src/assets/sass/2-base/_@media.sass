@@ -19,42 +19,113 @@
     +md(justify-content, center)
     +wrapper()
     
-/* Big tablet to 1200px (widths smaller taht the 1140px row) */
-@media only screen and (max-width: 1200px) 
-    .hero-text-box 
-        width: 100%
-        padding: 0 2%
+// /* Big tablet to 1200px (widths smaller taht the 1140px row) */
+// @media only screen and (max-width: 1200px) 
+//     .hero-text-box 
+//         width: 100%
+//         padding: 0 2%
     
    
    
 
-/* Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1023px) 
-    body 
-        font-size: 18px
-    section 
-        padding: 60px 0 
+// /* Small tablet to big tablet: from 768px to 1023px */
+// @media only screen and (max-width: 1023px) 
+//     body 
+//         font-size: 18px
+//     section 
+//         padding: 60px 0 
     
     
 
 
-/* Small phones to small tablets: from 481px to 767px */
-@media only screen and (max-width: 767px) 
-    body 
-        font-size: 16px
-    section 
-        padding: 30px 0 
+// /* Small phones to small tablets: from 481px to 767px */
+// @media only screen and (max-width: 767px) 
+//     body 
+//         font-size: 16px
+//     section 
+//         padding: 30px 0 
      
-    h1 
-        font-size: 180%
-    h2 
-        font-size: 150%
+//     h1 
+//         font-size: 180%
+//     h2 
+//         font-size: 150%
        
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px)
-    section 
-        padding: 25px 0
-    .contact-form 
-        width: 100%
-    .aside
-        display: none
+// /* Small phones: from 0 to 480px */
+// @media only screen and (max-width: 480px)
+//     section 
+//         padding: 25px 0
+//     .contact-form 
+//         width: 100%
+//     .aside
+//         display: none
+//$breakpoints: ('phone': 480px, 'tablet': 768px, 'desktop': 1024px) !default
+
+
+// @import "_include-media"
+// $breakpoints: ('phone': 480px, 'tablet': 768px, 'desktop': 1024px) !default
+
+// $media-expressions: ('screen': 'screen', 'print': 'print', 'handheld': 'handheld', 'retina2x': ('(-webkit-min-device-pixel-ratio: 2)', '(min-resolution: 192dpi)'), 'retina3x': ('(-webkit-min-device-pixel-ratio: 3)', '(min-resolution: 350dpi)')) !default
+
+// $unit-intervals: ('px': 1, 'em': 0.01, 'rem': 0.1) !default
+
+
+
+// @include media("<=phone")
+//     .aside
+//         display: none
+
+
+// +media(">phone") 
+    
+
+// +media(">=815px", "<desktop")
+
+// +media(">=desktop") 
+    
+// @include media("retina2x") 
+
+// // Small tablets and large smartphones (landscape view)
+// $screen-sm-min: 576px
+
+// // Small tablets (portrait view)
+// $screen-md-min: 768px
+
+// // Tablets and small desktops
+// $screen-lg-min: 992px
+
+// // Large tablets and desktops
+// $screen-xl-min: 1200px
+
+// // Small devices
+// =sm 
+//    @media (min-width: #{$screen-sm-min}) 
+//        @content
+   
+
+
+// // Medium devices
+// =md 
+//    @media (min-width: #{$screen-md-min}) 
+//        @content
+   
+
+
+// // Large devices
+// =lg 
+//    @media (min-width: #{$screen-lg-min}) 
+//        @content
+   
+
+
+// // Extra large devices
+// =xl 
+//    @media (min-width: #{$screen-xl-min}) 
+//        @content
+   
+// // Custom devices
+// =rwd($screen) 
+//    @media (min-width: $screen+'px') 
+//        @content
+
+
+   

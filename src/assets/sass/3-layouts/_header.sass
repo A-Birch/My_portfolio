@@ -12,6 +12,22 @@ header
         font-size: 200% 
         margin-bottom: 40px
         font-family: $font-second
+    a
+        &:hover,
+        &:focus 
+            cursor: pointer
+            color: $font-color-btn-link
+    @media only screen and (max-width: $tablet - 1)
+        flex-direction: column
+        h1 
+            font-size: 200%
+        p 
+            font-size: 150%
+        .hero-text
+            .btn
+                font-size: .7rem
+        .mouse-scroll-icon
+            padding-top: 15%
     .aside
         display: flex
         flex-direction: column
@@ -25,6 +41,27 @@ header
             align-self: center
             &:last-of-type
                 margin-bottom: 80px
+        @media only screen and (max-width: $tablet - 1)
+            display: none
+    .mobile-aside
+        display: none
+        flex-direction: row
+        height: 70px
+        background-color: black
+        color: white
+        justify-content: space-around
+        align-items: center
+        // div
+        //     margin-right: 40px
+        //     align-self: center
+        //     &:last-of-type
+        //         margin-right: 80px
+        @media only screen and (max-width: $tablet - 1)
+            display: flex
+            z-index: 100
+            
+            
+
 
 #hero-text
     margin-left: 1%
@@ -36,6 +73,7 @@ header
     flex-direction: column
     height: 100vh
     justify-content: space-around
+
 
 
 
