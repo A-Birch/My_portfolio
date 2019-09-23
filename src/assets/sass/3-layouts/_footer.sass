@@ -8,6 +8,10 @@ footer
     align-items: center
     &:first-child
         margin-bottom: 1rem
+    @media only screen and (max-width: $phone)
+       height: 25%
+       .social-links
+           margin-bottom: 0.3em
 
 .social-links
     list-style: none
@@ -27,4 +31,5 @@ footer
             &:active 
                 transform: scale(1.1) rotate(360deg)
                 color: $font-color-btn-link
+                transition: color 0.4s
 

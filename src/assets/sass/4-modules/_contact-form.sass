@@ -51,7 +51,21 @@ form
   @media screen and (max-width: $tablet - 1) 
     max-width: 90vw
     padding: 2em 2em 0.5em 2em
-    
+  
+  @media only screen and (max-width: $phone + 1)
+    padding: 1em 0.8em 0.5em 0.8em
+    fieldset
+      margin-bottom: 1em
+    textarea
+      height: 5em
+    input[type="submit"]
+      font-size: 1em
+      margin-bottom: 1em
+    input[type="email"],
+    input[type="text"],
+    textarea
+      width: calc(100% - 0.2em)
+          
 fieldset
   border: none
   margin-bottom: 2em
@@ -85,10 +99,6 @@ textarea
   &:focus 
     border-color: map-get($color, blue)
     outline: map-get($border, thickness) solid map-get($color, blue)
-
-label
-    
-
 
 textarea 
   line-height: 1.5

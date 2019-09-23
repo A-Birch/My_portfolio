@@ -30,7 +30,7 @@
 - var href6 = 'http://cona-cona.tk/'
 
 mixin card(num, head, text, href)
-    .card
+    .card(onclick="void(0)")
         span(class= num)
         span(class= num)
         span(class= num)
@@ -38,7 +38,7 @@ mixin card(num, head, text, href)
         .card-content
             h1= head
             p= text
-            a(href= href target="blank") VIEW SITE
+            a(href= href target="_blank") VIEW SITE
 
 +card(src1, head1, txt1, href1)               
 +card(src2, head2, txt2, href2)               

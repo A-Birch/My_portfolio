@@ -2,8 +2,18 @@
 
 section
     padding: 100px 0
+    @media only screen and (max-width: $phone)
+        padding: 30px 0
         
+#about
+    h2
+        @media only screen and (max-width: $phone)
+            margin-top: 40px 
+            padding: 0
 
+.wow 
+    @media only screen and (max-width: $phone)
+        animation: none
 #portfolio
     background-color: $portfolio-bg-color
 
